@@ -41,30 +41,32 @@
             <input id="inputBookIsComplete" type="checkbox" />
           </div>
           <button id="bookSubmit" type="submit">
-            Masukkan Buku ke rak <span>Belum selesai dibaca</span>
+            Simpan Buku
           </button>
         </form>
       </section>
 
-      <section class="search_section">
-        <h2>Cari Buku (Opsional)</h2>
-        <form id="searchBook">
-          <label for="searchBookTitle">Judul</label>
-          <input id="searchBookTitle" type="text" />
-          <button id="searchSubmit" type="submit">Cari</button>
-        </form>
-      </section>
+      <section class="show_data_section">
+        <section class="search_section">
+          <h2>Cari Buku</h2>
+          <form id="searchBook">
+            <label for="searchBookTitle">Judul</label>
+            <input id="searchBookTitle" type="text" />
+            <button id="searchSubmit" type="submit">Cari</button>
+          </form>
+        </section>
 
-      <section class="book_shelf">
-        <h2>Belum selesai dibaca</h2>
+        <section class="book_shelf">
+          <h2>Belum selesai dibaca</h2>
 
-        <div id="incompleteBookshelfList" class="book_list"></div>
-      </section>
+          <div id="incompleteBookshelfList" class="book_list"></div>
+        </section>
 
-      <section class="book_shelf">
-        <h2>Selesai dibaca</h2>
+        <section class="book_shelf">
+          <h2>Selesai dibaca</h2>
 
-        <div id="completeBookshelfList" class="book_list"></div>
+          <div id="completeBookshelfList" class="book_list"></div>
+        </section>
       </section>
     </main>
     <div class="alert"></div>
