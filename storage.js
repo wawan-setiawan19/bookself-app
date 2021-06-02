@@ -1,4 +1,5 @@
 const bookData = "BOOK_DATA";
+let index;
 
 const cekStorage = () => {
   return typeof Storage !== "undefined";
@@ -31,7 +32,7 @@ const simpanData = (data) => {
 
     localStorage.setItem(bookData, JSON.stringify(userData));
   }
-  showAlert("data berhasil ditambahkan");
+  showAlert("data berhasil ditambahkan", 'info');
 };
 
 const showDataUnfinished = () => {
@@ -84,7 +85,7 @@ const activeButton = () => {
 
   completeButton.forEach((element) => {
     element.addEventListener("click", (e) => {
-      const index = data.findIndex(
+      index = data.findIndex(
         (obj) => obj.id == e.target.parentElement.id
       );
       data[index].sudahDibaca = true;
@@ -95,7 +96,7 @@ const activeButton = () => {
 
   uncompleteButton.forEach((element) => {
     element.addEventListener("click", (e) => {
-      const index = data.findIndex(
+      index = data.findIndex(
         (obj) => obj.id == e.target.parentElement.id
       );
       console.log(index);
@@ -107,13 +108,10 @@ const activeButton = () => {
 
   deleteButton.forEach((element) => {
     element.addEventListener("click", (e) => {
-      const index = data.findIndex(
+      index = data.findIndex(
         (obj) => obj.id == e.target.parentElement.id
       );
       showDanger();
-      // data.splice(index, 1);
-      // localStorage.setItem(bookData, JSON.stringify(data));
-      // renderList();
     });
   });
 };
